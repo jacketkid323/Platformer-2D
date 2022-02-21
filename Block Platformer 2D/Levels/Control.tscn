@@ -1,0 +1,267 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Levels/UI.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/UI/grey_button04.png" type="Texture" id=2]
+[ext_resource path="res://assets/Tiles/tileYellow_06.png" type="Texture" id=3]
+[ext_resource path="res://assets/more fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Levels/PlayButtn.gd" type="Script" id=5]
+[ext_resource path="res://coin_test.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.231373, 0.00784314, 0.415686, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=2]
+size = 61
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 40.1
+anchor_bottom = 37.64
+margin_right = -0.00390625
+margin_bottom = -0.00195313
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -13.0
+margin_top = -35.0
+margin_right = -77.0
+margin_bottom = 2.0
+color = Color( 0.203922, 0.0352941, 0.482353, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_right = 0.018
+anchor_bottom = 0.015
+margin_left = 3.0
+margin_top = 30.0
+margin_right = -2.90405
+margin_bottom = 17.32
+custom_colors/font_color = Color( 0.909804, 0.121569, 0.121569, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Block Platformer 2D"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title2" type="Label" parent="."]
+anchor_right = 0.018
+anchor_bottom = 0.015
+margin_left = 763.0
+margin_top = 317.0
+margin_right = 757.096
+margin_bottom = 304.32
+rect_scale = Vector2( 0.8, 0.84 )
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0.219608, 0.121569, 0.909804, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Beta Verion: 1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="by who" type="Label" parent="."]
+anchor_right = 0.018
+anchor_bottom = 0.015
+margin_left = 190.0
+margin_top = 94.0
+margin_right = 108.096
+margin_bottom = -26.68
+rect_scale = Vector2( 0.76996, 0.769641 )
+custom_colors/font_color = Color( 0.0901961, 0.67451, 0.768627, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "by Jacketkid323"
+align = 1
+
+[node name="ControlsPanel" type="Panel" parent="."]
+margin_left = 40.0
+margin_top = 507.0
+margin_right = 619.0
+margin_bottom = 758.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="SpaceBar" type="TextureRect" parent="ControlsPanel"]
+margin_left = 35.0
+margin_top = 35.0
+margin_right = 264.0
+margin_bottom = 92.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="A" type="TextureRect" parent="ControlsPanel"]
+margin_left = 75.0
+margin_top = 141.0
+margin_right = 146.0
+margin_bottom = 198.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="D" type="TextureRect" parent="ControlsPanel"]
+margin_left = 179.0
+margin_top = 142.0
+margin_right = 250.0
+margin_bottom = 199.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsPanel" type="Panel" parent="."]
+margin_left = 823.0
+margin_top = 504.0
+margin_right = 1249.0
+margin_bottom = 755.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpaceBarLabel" type="Label" parent="."]
+margin_left = 101.0
+margin_top = 534.0
+margin_right = 151.0
+margin_bottom = 609.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "SPACE"
+
+[node name="Jump" type="Label" parent="."]
+margin_left = 329.0
+margin_top = 533.0
+margin_right = 500.0
+margin_bottom = 608.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "= JUMP!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ALabel" type="Label" parent="."]
+margin_left = 129.0
+margin_top = 640.0
+margin_right = 320.0
+margin_bottom = 715.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DLabel" type="Label" parent="."]
+margin_left = 234.0
+margin_top = 640.0
+margin_right = 425.0
+margin_bottom = 715.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Movements" type="Label" parent="."]
+margin_left = 340.0
+margin_top = 639.0
+margin_right = 531.0
+margin_bottom = 714.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "= MOVE!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Label" parent="."]
+margin_left = 150.0
+margin_top = 419.0
+margin_right = 379.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Controls:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls2" type="Label" parent="."]
+margin_left = 839.0
+margin_top = 415.0
+margin_right = 1068.0
+margin_bottom = 490.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Items:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls3" type="Label" parent="."]
+margin_left = 905.0
+margin_top = 513.0
+margin_right = 1134.0
+margin_bottom = 588.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "= You"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instuctions" type="Label" parent="."]
+margin_left = 895.0
+margin_top = 609.0
+margin_right = 1266.0
+margin_bottom = 762.0
+rect_scale = Vector2( 0.6, 0.65 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "= collect all
+10 coins to win"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileYellow06" type="Sprite" parent="."]
+position = Vector2( 865, 554 )
+texture = ExtResource( 3 )
+
+[node name="PlayButtn" type="Button" parent="."]
+margin_left = 495.0
+margin_top = 325.0
+margin_right = 919.0
+margin_bottom = 400.0
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.0862745, 0.137255, 0.572549, 1 )
+custom_colors/font_color_hover = Color( 0.109804, 0.898039, 0.980392, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Play"
+flat = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinTest" type="Sprite" parent="."]
+position = Vector2( 852, 639 )
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 6 )
+hframes = 6
+
+[connection signal="pressed" from="PlayButtn" to="PlayButtn" method="_on_PlayButtn_pressed"]
